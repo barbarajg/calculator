@@ -1,7 +1,7 @@
 import '../styles/ClearButton.css';
 
-const ClearButton = () => (
-    <div className="clear-button">
+const ClearButton = (props) => (
+    <div className="clear-button" onClick={props.handleClear}>
         Clear
     </div>
 );
