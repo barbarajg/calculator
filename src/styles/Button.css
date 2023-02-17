@@ -15,6 +15,14 @@
   user-select: none;
 }
 
+.button-container:hover {
+  background-color: #5101a7;
+}
+
 .operator {
   background-color: #00471b;
+}
+
+.operator:hover {
+  background-color: #ff6600;
 }
