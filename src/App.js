@@ -1,6 +1,7 @@
 import './App.css';
 import logo from './images/header.jpg';
 import Button from './components/Button';
+import Display from './components/Display';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           alt='Logo' />
       </div>
       <div className='calculator-container'>
+        <Display/>
         <div className='row'>
           <Button>1</Button>
           <Button>2</Button>
