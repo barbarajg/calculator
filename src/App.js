@@ -26,14 +26,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className='logo-container'>
-        <img
-          src={logo}
-          className='logo-image'
-          alt='Logo' />
-      </div>
       <div className='calculator-container'>
-        <Display input={input}/>
+        <Display input={input} />
         <div className='row'>
           <Button handleClick={addInput}>1</Button>
           <Button handleClick={addInput}>2</Button>
