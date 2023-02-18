@@ -11,7 +11,9 @@ function App() {
   const [input, setInput] = useState('');
 
   const addInput = (val) => {
-    setInput(input + val);
+    if(input.length < 21){
+      setInput(input + val);
+    }    
   }
 
   const calculateResult = () => {

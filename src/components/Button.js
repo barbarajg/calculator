@@ -7,9 +7,9 @@ const Button = (props) => {
     }
 
   return (
-    <div className={`button-container ${isOperator(props.children) ? 'operator' : ''}`} onClick={() => props.handleClick(props.children)}>
+    <button className={`button-container ${isOperator(props.children) ? 'operator' : ''}`} onClick={() => props.handleClick(props.children)}>
         {props.children}
-    </div>
+    </button>
   );
 }
 
