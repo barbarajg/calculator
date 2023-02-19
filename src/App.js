@@ -2,25 +2,42 @@ import './App.css';
 import Button from './components/Button';
 import Display from './components/Display';
 import ClearButton from './components/ClearButton';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { evaluate } from 'mathjs';
 
 function App() {
   
   const [input, setInput] = useState('');
+  const [result, setResult] = useState('');
+
+  useEffect(() => {
+    if (input) {
+      setInput(input);
+      setResult(result);
+    }
+  }, [input, result]);
 
   const addInput = (val) => {
-    if(input.length < 21){
+    if(result){
+      setInput(result + val);
+      setResult('');
+    } else {
       setInput(input + val);
-    }    
+    }
+    if(input.length > 20){  
+      alert("Input is too long");
+      setInput('');
+    } 
   }
 
   const calculateResult = () => {
-    if (input){
+    if (input){      
       setInput(evaluate(input));
+      setResult(evaluate(input));
     } else {
       alert("Please enter a valid input");
     }    
+    return result;  
   }
 
   return (
